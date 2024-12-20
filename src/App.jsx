@@ -118,11 +118,17 @@ setAllContact([]);
       <div className="px-4 bg-gray-800 h-screen w-full py-2 ">
         <div className="w-full gap-10 flex ">
         <h2 className="text-2xl  border-2 border-blue-500 bg-blue-500 text-white text-semi-bold mt-4 w-[13%]  py-2 text-center rounded-md ml-2 mb-4"> All contacts</h2>
+         {allContact.length > 0 ? (
+          
           <button 
           onClick={()=>{
             deleteAll()
           }}
           className=" bg-red-700 rounded-md py-2 text-2xl mt-4 ml-2 mb-4 text-white w-[13%]">🗑️ Delete All</button>
+
+         ):(
+          <></>
+         )}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2 mx-auto">
         {allContact.length > 0 ?(
